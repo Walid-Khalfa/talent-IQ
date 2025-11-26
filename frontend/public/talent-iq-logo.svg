@@ -1,0 +1,40 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#00ff66" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#00ff66" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#00ff66" stop-opacity="0" />
+    </radialGradient>
+    <filter id="neon" x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" fill="#0b1220" />
+  <rect width="512" height="512" fill="url(#glow)" />
+  <g filter="url(#neon)" stroke="#00ff66" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M100 150c-12 20-18 49-18 106s6 86 18 106" fill="none" />
+    <path d="M412 150c12 20 18 49 18 106s-6 86-18 106" fill="none" />
+  </g>
+  <g filter="url(#neon)">
+    <path d="M256 128c-80 0-120 52-120 112 0 72 56 144 120 144s120-72 120-144c0-60-40-112-120-112z" stroke="#00ff66" stroke-width="14" fill="none" />
+    <path d="M256 148c-58 0-92 40-92 92 0 60 44 116 92 116s92-56 92-116c0-52-34-92-92-92z" stroke="#0cff8b" stroke-width="8" fill="none" />
+    <circle cx="256" cy="160" r="10" fill="#00ff66" />
+    <circle cx="256" cy="214" r="10" fill="#00ff66" />
+    <circle cx="256" cy="270" r="10" fill="#00ff66" />
+    <circle cx="256" cy="324" r="10" fill="#00ff66" />
+    <circle cx="206" cy="194" r="10" fill="#00ff66" />
+    <circle cx="206" cy="250" r="10" fill="#00ff66" />
+    <circle cx="206" cy="304" r="10" fill="#00ff66" />
+    <circle cx="306" cy="194" r="10" fill="#00ff66" />
+    <circle cx="306" cy="250" r="10" fill="#00ff66" />
+    <circle cx="306" cy="304" r="10" fill="#00ff66" />
+    <path d="M256 160v44M256 214v44M256 270v44M206 194l30 20M206 250l30 20M206 304l30 20M306 194l-30 20M306 250l-30 20M306 304l-30 20" stroke="#00ff66" stroke-width="8" stroke-linecap="round" />
+    <path d="M266 152l-40 80h32l-12 64 40-84h-30z" fill="#0b1220" stroke="#00ff66" stroke-width="10" stroke-linejoin="round" />
+  </g>
+  <text x="256" y="446" text-anchor="middle" font-family="'Segoe UI Black','Inter','Arial Black',sans-serif" font-size="74" font-weight="800" fill="#0aff75" letter-spacing="1">TALENT</text>
+  <text x="360" y="446" text-anchor="middle" font-family="'Segoe UI Black','Inter','Arial Black',sans-serif" font-size="74" font-weight="800" fill="#6df79f" letter-spacing="1">IQ</text>
+</svg>

@@ -1,11 +1,11 @@
 import { Link, useLocation } from "react-router";
-import { BookOpenIcon, LayoutDashboardIcon, SparklesIcon } from "lucide-react";
+import { BookOpenIcon, LayoutDashboardIcon } from "lucide-react";
 import { UserButton } from "@clerk/clerk-react";
+import logo from "/talent-iq-logo.svg";
+import ThemeToggle from "./ThemeToggle";
 
 function Navbar() {
   const location = useLocation();
-
-  console.log(location);
 
   const isActive = (path) => location.pathname === path;
 
@@ -17,9 +17,11 @@ function Navbar() {
           to="/"
           className="group flex items-center gap-3 hover:scale-105 transition-transform duration-200"
         >
-          <div className="size-10 rounded-xl bg-gradient-to-r from-primary via-secondary to-accent flex items-center justify-center shadow-lg ">
-            <SparklesIcon className="size-6 text-white" />
-          </div>
+          <img
+            src={logo}
+            alt="Talent IQ logo"
+            className="h-12 w-12 rounded-lg border border-primary/40 bg-base-200/60 shadow-lg"
+          />
 
           <div className="flex flex-col">
             <span className="font-black text-xl bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent font-mono tracking-wider">
@@ -29,7 +31,7 @@ function Navbar() {
           </div>
         </Link>
 
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-2">
           {/* PROBLEMS PAGE LINK */}
           <Link
             to={"/problems"}
@@ -66,7 +68,11 @@ function Navbar() {
             </div>
           </Link>
 
-          <div className="ml-4 mt-2">
+          <div className="hidden sm:block">
+            <ThemeToggle />
+          </div>
+
+          <div className="ml-2 sm:ml-4 mt-2">
             <UserButton />
           </div>
         </div>

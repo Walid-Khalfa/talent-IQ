@@ -7,6 +7,7 @@ import DashboardPage from "./pages/DashboardPage";
 import ProblemPage from "./pages/ProblemPage";
 import ProblemsPage from "./pages/ProblemsPage";
 import SessionPage from "./pages/SessionPage";
+import Footer from "./components/Footer";
 
 function App() {
   const { isSignedIn, isLoaded } = useUser();
@@ -25,6 +26,7 @@ function App() {
         <Route path="/session/:id" element={isSignedIn ? <SessionPage /> : <Navigate to={"/"} />} />
       </Routes>
 
+      <Footer />
       <Toaster toastOptions={{ duration: 3000 }} />
     </>
   );
